@@ -102,6 +102,24 @@ docker compose run --rm freqtrade create-userdir --userdir user_data
 docker compose run --rm freqtrade new-config --config user_data/config.json
 ```
 
+**Réponses conseillées aux questions de `new-config` :**
+
+| Question | Réponse |
+|---|---|
+| Do you want to enable Dry-run (simulated trades)? | **Yes** (simulation, aucune clé d'API demandée) |
+| Please insert your stake currency | `USDT` |
+| Please insert your stake amount | `unlimited` (le capital fictif est réparti entre les trades) |
+| Please insert max_open_trades | `3` |
+| Time | *Have the strategy define timeframe.* |
+| Please insert your display Currency | `EUR` |
+| Select exchange | **binance** pour le test : son historique de prix public se télécharge vite, sans compte |
+| Do you want to trade Perpetual Swaps? | **No** (pas d'effet de levier) |
+| Do you want to enable Telegram? | No, pour l'instant |
+| Do you want to enable the Rest API (includes FreqUI)? | **Yes**, puis choisis un identifiant et un mot de passe |
+
+Kraken marche aussi, mais il ne fournit qu'un historique court : il faut
+ajouter `--dl-trades` à `download-data`, et le téléchargement est beaucoup plus long.
+
 **Étape obligatoire avant le backtest.** La configuration créée par défaut
 choisit les cryptos selon le volume du moment (`VolumePairList`), et Freqtrade
 refuse alors de lancer un backtest. Ouvre `user_data/config.json` et :
