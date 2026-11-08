@@ -147,9 +147,65 @@ docker compose run --rm freqtrade backtesting --config user_data/config.json --s
 docker compose up -d
 ```
 
+## Passer en argent réel
+
+Le bot passe alors de vrais ordres avec ton argent. La documentation de
+Freqtrade prévient : *« une mauvaise stratégie peut te faire perdre tout ton argent »*.
+
+**0. Le backtest d'abord : 5 minutes, pas 4 semaines.** Le backtest n'est pas
+une simulation qui dure : il rejoue en quelques minutes les **vrais prix des
+derniers mois**. S'il montre une perte, lancer la même stratégie en réel, c'est
+perdre de l'argent réel. `SampleStrategy` est un **exemple pédagogique**, pas une
+stratégie conçue pour gagner.
+
+**1. Ouvre un compte sur une plateforme autorisée en France** et prise en charge
+par Freqtrade (par exemple Kraken, Bybit EU ou MyOKX). Vérifie son autorisation
+sur le site de l'[AMF](https://www.amf-france.org/). Fais ton backtest sur
+**cette même plateforme** (avec Kraken, ajoute `--dl-trades` à `download-data`).
+
+**2. Dépose une petite somme**, que tu acceptes de perdre entièrement.
+
+**3. Crée une clé d'API** sur la plateforme, avec ces réglages :
+- ✅ trading au comptant (*spot*) uniquement ;
+- ❌ **retraits désactivés**. Même si la clé est volée, personne ne peut sortir tes fonds ;
+- ❌ pas de *futures* ni de marge ;
+- si la plateforme le propose, limite la clé à l'adresse IP de la machine du bot.
+
+**4. Mets tes clés dans un fichier à part**, `user_data/config-private.json`,
+comme le recommande la documentation. Ne les montre à personne et ne les colle
+jamais dans une conversation, même avec une IA.
+
+```json
+{
+    "dry_run": false,
+    "exchange": {
+        "name": "kraken",
+        "api_key": "TA_CLE_ICI",
+        "secret": "TON_SECRET_ICI"
+    }
+}
+```
+
+Mets le nom de ta plateforme dans `"name"` (`kraken`, `okx`, `bybit`…) et une
+devise qu'elle propose dans `"pair_whitelist"` (par exemple `BTC/EUR` sur Kraken).
+N'ajoute pas de `db_url` : Freqtrade utilise alors automatiquement une base de
+données séparée pour le réel, et tes trades de test ne se mélangent pas avec les vrais.
+
+**5. Lance le bot en réel**
+
+```bash
+freqtrade trade --config user_data/config.json --config user_data/config-private.json --strategy SampleStrategy
+```
+
+**6. Le bot doit tourner jour et nuit.** Si l'ordinateur s'éteint, le bot
+s'arrête, mais les positions ouvertes restent sur la plateforme. Un petit
+serveur loué (VPS, quelques euros par mois) règle ce problème et donne une
+adresse IP fixe pour l'étape 3. Pour tout revendre, utilise le bouton
+*Force exit* dans FreqUI.
+
 ### Les règles d'or avant de passer à l'argent réel
 
-1. **Au moins 4 semaines en simulation.** Si les résultats en direct sont bien moins bons que le backtest, la stratégie est sur-optimisée : ne la lance pas en réel.
+1. **Un backtest positif, au minimum.** Idéalement, ajoute quelques semaines de simulation : si les résultats en direct sont bien moins bons que le backtest, la stratégie est sur-optimisée et perdra en réel.
 2. **Petite somme d'abord**, uniquement de l'argent que tu acceptes de perdre entièrement.
 3. **Clé d'API sans droit de retrait**, et limitée à l'adresse IP de ton serveur si la plateforme le permet.
 4. **Toujours un stop-loss**, et **pas d'effet de levier** au début.
