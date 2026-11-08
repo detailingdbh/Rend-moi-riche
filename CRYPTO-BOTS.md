@@ -221,3 +221,45 @@ figure **pas** dans la liste officielle de Freqtrade, qui précise que les
 autres plateformes CCXT *« peuvent fonctionner, sans garantie »*. Pour
 démarrer, une plateforme officiellement prise en charge (Kraken, Bybit EU,
 MyOKX…) est donc plus sûre.
+
+---
+
+## Faire tourner plusieurs bots
+
+**Avec Freqtrade** ([documentation](https://www.freqtrade.io/en/stable/advanced-setup/)),
+chaque bot a besoin de :
+- son **propre fichier de configuration** (et souvent sa propre stratégie) ;
+- sa **propre base de données** : `--db-url sqlite:///user_data/bot1.live.sqlite` ;
+- son **propre port** pour l'interface web (8080, 8081, 8082…) ;
+- son **propre bot Telegram**, si tu utilises Telegram.
+
+[FreqUI](https://www.freqtrade.io/en/stable/freq-ui/) affiche ensuite tous les bots sur un même tableau de bord.
+
+⚠️ Des bots branchés sur **le même compte** ne savent pas ce que font les
+autres. Avec `"stake_amount": "unlimited"`, ils se disputent le même solde.
+Donne à chaque bot un **montant fixe** (par exemple `"stake_amount": 20`), ou
+utilise un **sous-compte** par bot si ta plateforme le permet.
+
+**Avec OctoBot**, une seule installation (« node mode ») gère plusieurs
+automatisations (Grid, DCA, TradingView…). **Avec Hummingbot**, le
+[Dashboard](https://github.com/hummingbot/dashboard) crée, teste et pilote plusieurs bots.
+
+---
+
+## Tous les liens utiles
+
+Liens officiels, **sans lien de parrainage**.
+
+| Usage | Lien |
+|---|---|
+| Freqtrade (code) | https://github.com/freqtrade/freqtrade |
+| Freqtrade (documentation) | https://www.freqtrade.io/en/stable/ |
+| Freqtrade (stratégies gratuites) | https://github.com/freqtrade/freqtrade-strategies |
+| OctoBot | https://github.com/Drakkar-Software/OctoBot · https://www.octobot.cloud/ |
+| Jesse | https://github.com/jesse-ai/jesse · https://jesse.trade/ |
+| Hummingbot | https://github.com/hummingbot/hummingbot · https://hummingbot.org/ |
+| Docker | https://www.docker.com/products/docker-desktop/ |
+| Créer un bot Telegram | https://t.me/BotFather |
+| Plateformes de la liste officielle de Freqtrade | https://www.kraken.com/ · https://www.bybit.eu/ · https://www.okx.com/ · https://www.gate.com/en-eu · https://bitvavo.com/ |
+| Vérifier une plateforme (France) | https://www.amf-france.org/fr/espace-epargnants/proteger-son-epargne/listes-blanches |
+| Vérifier une plateforme (Europe, MiCA) | https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica |
