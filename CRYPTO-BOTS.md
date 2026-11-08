@@ -87,6 +87,8 @@ privée de ton portefeuille. Ne lance jamais ce genre de code.
 
 ## Démarrer avec Freqtrade, sans risquer un euro
 
+👉 **Guide d'installation complet, étape par étape : [INSTALLATION.md](INSTALLATION.md)**
+
 Il faut [Docker](https://www.docker.com/products/docker-desktop/) installé sur
 un ordinateur. Ces commandes viennent de la
 [documentation officielle](https://www.freqtrade.io/en/stable/docker_quickstart/).
