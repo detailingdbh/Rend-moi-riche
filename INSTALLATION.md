@@ -6,6 +6,39 @@ Les étapes de configuration ont été testées avec **Freqtrade 2026.10**.
 
 ---
 
+## 📱 Tu n'as qu'un iPhone ?
+
+Freqtrade ne s'installe pas sur un téléphone. Trois solutions, de la plus simple à la plus complète :
+
+| Solution | Difficulté | Coût | Plusieurs bots |
+|---|---|---|---|
+| **Bot intégré à une plateforme**, directement dans son app (ex. bots *Spot Grid* et *Spot DCA* d'OKX Europe) | ⭐ Très facile | Gratuit, seuls les frais de trading s'appliquent | Oui |
+| **OctoBot Cloud** (le projet GitHub OctoBot, hébergé pour toi) + [app iPhone](https://apps.apple.com/us/app/octobot-crypto-investment/id6502774175) | ⭐⭐ Facile | Offre gratuite limitée ; environ 10 $/mois pour 10 bots, 30 $/mois pour 30 bots (prix relevés dans des avis, à vérifier sur le site officiel) | Oui |
+| **Freqtrade sur un serveur loué**, piloté depuis l'iPhone | ⭐⭐⭐ Difficile sur téléphone | Serveur : quelques € par mois | Oui |
+
+Dans tous les cas, vérifie d'abord que la plateforme est autorisée en France
+([liste blanche de l'AMF](https://www.amf-france.org/fr/espace-epargnants/proteger-son-epargne/listes-blanches)).
+
+### Freqtrade depuis un iPhone
+
+1. **Loue un serveur Linux** (VPS) avec **Ubuntu** et **au moins 2 Go de mémoire**,
+   par exemple chez [OVHcloud](https://www.ovhcloud.com/fr/vps/) ou [Hetzner](https://www.hetzner.com/cloud).
+   Tu reçois par e-mail son **adresse IP** et son **mot de passe**.
+2. **Installe l'app [Termius](https://apps.apple.com/fr/app/termius-modern-ssh-client/id549039908)**
+   (gratuite). Ajoute un serveur (*New Host*) : l'adresse IP, l'utilisateur `root`
+   et le mot de passe reçu. Connecte-toi.
+3. **Suis ce guide en version « Serveur Linux »** à partir de l'étape 1. Pour chaque
+   commande, ouvre ce guide sur GitHub dans Safari, copie, puis colle dans Termius.
+   La barre au-dessus du clavier de Termius contient la touche **Ctrl** pour `nano`.
+4. **À l'étape 4, réponds Yes à Telegram**, pour piloter le bot depuis ton iPhone :
+   - le *token* : crée ton bot avec [@BotFather](https://t.me/BotFather) (commande `/newbot`) ;
+   - le *chat id* : envoie un message à [@userinfobot](https://t.me/userinfobot), il te donne ton « Id » ;
+   - ouvre ensuite la conversation avec ton bot et appuie sur **Démarrer** (*Start*).
+
+   Tu pourras alors taper `/status`, `/profit`, `/balance` ou `/stop` dans Telegram.
+
+---
+
 ## Où l'installer ?
 
 | Pour… | Où | Pourquoi |
