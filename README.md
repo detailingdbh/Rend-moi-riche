@@ -79,6 +79,8 @@ Ces projets sont **sérieux et légitimes**, mais ce sont des outils, pas des
 machines à billets. La majorité des particuliers qui font du trading actif
 perdent de l'argent.
 
+👉 **Comparatif détaillé des bots crypto : [CRYPTO-BOTS.md](CRYPTO-BOTS.md)**
+
 | Dépôt | ⭐ | À quoi ça sert |
 |---|---|---|
 | [freqtrade/freqtrade](https://github.com/freqtrade/freqtrade) | 56 k | Bot de trading crypto open source, avec mode simulation (*dry-run*) et backtests. |
