@@ -113,6 +113,16 @@ de leur propre « usine à vidéos » publiée sur GitHub
 - La vidéo trade de l'**or sur MetaTrader 5**, pas des cryptos.
 - Ce n'est pas un produit officiel d'Anthropic : leurs règles interdisent de le présenter comme tel.
 
+## La vidéo « fomo + Grok Bot » (+8 701 % en une nuit)
+
+Vérifié le 10 novembre 2026 (vidéo TikTok @trading.calls) :
+
+- Une petite étiquette **« SIM »** est affichée à côté du solde pendant toute la vidéo : c'est une **simulation**, pas de l'argent réel.
+- Le bot copie 4 « top traders » de l'app [fomo](https://fomo.family) 30 secondes après eux, sur des *memecoins* minuscules (35 000 à 1 million de dollars de capitalisation).
+- Acheter 30 secondes après un trader connu sur une si petite crypto, c'est acheter plus cher que lui. C'est souvent à toi qu'il revend. Des chercheurs décrivent des bots conçus pour piéger les copieurs ([arXiv 2601.08641](https://arxiv.org/abs/2601.08641)).
+- D'après un tableau Dune cité par Blockworks, seuls **6 % des traders de fomo** étaient gagnants sur 90 jours (chiffre non vérifié).
+- Les « Grok Bot » de copie publiés sur GitHub démarrent tous en mode *paper*, c'est-à-dire en simulation.
+
 ## 🚫 Les bots à éviter
 
 **Projets abandonnés** : plus mis à jour, donc incompatibles avec les plateformes actuelles et sans correctifs de sécurité.
