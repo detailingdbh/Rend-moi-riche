@@ -86,6 +86,20 @@ publiés dans les commentaires de chaque *commit*.
 | *Airdrop farming* (Grass, Galxe, testnets…) | getgrass-bot, MasterCryptoFarmBot | Multiplie les comptes et les proxys : souvent interdit par les règles des projets, avec un risque de bannissement. Ne jamais y mettre une clé privée. |
 | Arbitrage | Hummingbot, crypto-arbitrage | Les écarts de prix sont captés en millisecondes par des professionnels. |
 
+## Le « skill Claude trader » vu sur TikTok
+
+Vérifié le 10 novembre 2026 : [Jakeschincariol/trader-skill](https://github.com/Jakeschincariol/trader-skill) (1,6 k ⭐)
+et sa suite [day-trader-skill](https://github.com/Jakeschincariol/day-trader-skill) (6,5 k ⭐).
+
+- **C'est pour les actions américaines** (Tesla, Apple…), **pas pour les cryptos** : son module de risque bloque les cryptos (*« stocks and ETFs only »*).
+- Ce sont des **outils d'analyse** : ils ne tradent rien tout seuls, simulation par défaut. Il faut Claude Code sur un ordinateur, Python et un courtier américain (Alpaca).
+- Son propre README dit : *« La plupart des gens qui font du day trading perdent de l'argent. »* Et le trade Tesla présenté dans la vidéo, rejoué par l'outil, donne *« presque pile ou face »* : 13 gains, 15 pertes sur 33 fois.
+- Le code relu rapidement semble propre : données publiques, aucune lecture de portefeuille ni de clé.
+
+La version crypto, [crypto-trader-skill](https://github.com/syedishaq7262-svg/crypto-trader-skill),
+écrit en tête de son README : ses stratégies ont été testées sur **37 401 trades**, et
+**aucune n'a gagné une fois les frais payés**. En moyenne, chaque stratégie perdait de l'argent.
+
 ## 🚫 Les bots à éviter
 
 **Projets abandonnés** : plus mis à jour, donc incompatibles avec les plateformes actuelles et sans correctifs de sécurité.
