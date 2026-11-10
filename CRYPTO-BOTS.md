@@ -67,6 +67,25 @@ les bugs signalés sont traités vite : c'est un projet très bien entretenu.
 
 ---
 
+## La stratégie la plus suivie : NostalgiaForInfinity
+
+[iterativv/NostalgiaForInfinity](https://github.com/iterativv/NostalgiaForInfinity)
+(3,5 k ⭐, 768 forks, mise à jour en continu, GPL-3.0) est la stratégie
+communautaire la plus populaire pour Freqtrade. Les résultats de backtest sont
+publiés dans les commentaires de chaque *commit*.
+
+- Elle demande **Freqtrade sur un serveur**, et ses auteurs recommandent **6 à 12 trades ouverts** sur **40 à 80 cryptos**.
+- Avec un petit capital, chaque trade est minuscule, et le serveur (quelques € par mois) coûte vite plus que ce que le bot peut gagner.
+- Comme toujours, un bon backtest ne garantit rien pour la suite.
+
+## Les autres « bots qui rapportent » trouvés sur GitHub
+
+| Type | Exemple | Ce qu'il faut savoir |
+|---|---|---|
+| Marchés de prédiction (Polymarket) | [warproxxx/poly-maker](https://github.com/warproxxx/poly-maker) (1,5 k ⭐) | Son README prévient : *« peut perdre de l'argent, ce n'est pas une implémentation garantie rentable »*. |
+| *Airdrop farming* (Grass, Galxe, testnets…) | getgrass-bot, MasterCryptoFarmBot | Multiplie les comptes et les proxys : souvent interdit par les règles des projets, avec un risque de bannissement. Ne jamais y mettre une clé privée. |
+| Arbitrage | Hummingbot, crypto-arbitrage | Les écarts de prix sont captés en millisecondes par des professionnels. |
+
 ## 🚫 Les bots à éviter
 
 **Projets abandonnés** : plus mis à jour, donc incompatibles avec les plateformes actuelles et sans correctifs de sécurité.
