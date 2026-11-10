@@ -100,6 +100,19 @@ La version crypto, [crypto-trader-skill](https://github.com/syedishaq7262-svg/cr
 écrit en tête de son README : ses stratégies ont été testées sur **37 401 trades**, et
 **aucune n'a gagné une fois les frais payés**. En moyenne, chaque stratégie perdait de l'argent.
 
+## La pub TikTok « cubrik + Claude »
+
+Vérifié le 10 novembre 2026 : la vidéo « Claude vient de tuer les day traders » (@paulitoo.ai)
+est une **publicité** pour [cubrik.ai](https://cubrik.ai), un service payant. Elle vient
+de leur propre « usine à vidéos » publiée sur GitHub
+([Nikos05/cubrik-reels](https://github.com/Nikos05/cubrik-reels)), qui la cite comme
+« le reel de lancement ».
+
+- Les résultats affichés (61 % de réussite, +38,4 %, « Take profit +1 385,38 $ ») sont écrits à la main dans le code de la vidéo. Leurs règles disent : *« Les chiffres de démo à l'écran sont des illustrations. »*
+- Prix relevés dans leur dépôt : démo gratuite, puis 19 €/mois, 59 €/mois (pour les backtests sur 5 ans montrés dans la vidéo), 199 € et 399 €/mois.
+- La vidéo trade de l'**or sur MetaTrader 5**, pas des cryptos.
+- Ce n'est pas un produit officiel d'Anthropic : leurs règles interdisent de le présenter comme tel.
+
 ## 🚫 Les bots à éviter
 
 **Projets abandonnés** : plus mis à jour, donc incompatibles avec les plateformes actuelles et sans correctifs de sécurité.
