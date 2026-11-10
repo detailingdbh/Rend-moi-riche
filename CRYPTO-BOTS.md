@@ -123,6 +123,16 @@ Vérifié le 10 novembre 2026 (vidéo TikTok @trading.calls) :
 - D'après un tableau Dune cité par Blockworks, seuls **6 % des traders de fomo** étaient gagnants sur 90 jours (chiffre non vérifié).
 - Les « Grok Bot » de copie publiés sur GitHub démarrent tous en mode *paper*, c'est-à-dire en simulation.
 
+## La vidéo « Grok Bot × copy.top » (97 $ → 3 725 $ en 24 h)
+
+Vérifié le 10 novembre 2026 (vidéo TikTok @0xnevsky) :
+
+- **copy.top est introuvable** : aucune trace sur le web ni sur GitHub. La vidéo se termine sur un bouton « copy with Grok Bot × copy.top ».
+- Elle demande de **connecter son portefeuille** (Phantom est dans le dossier) à ce service inconnu. C'est la méthode classique pour vider un portefeuille : le site fait signer une autorisation, et la promesse « ne peut pas retirer les fonds » vient du site lui-même.
+- Rien ne prouve que les gains sont réels : aucune transaction vérifiable, et l'heure saute de 17 h 01 à 17 h 00 le lendemain, c'est un montage de captures.
+- Même vrais, ce serait une seule journée choisie sur des *memecoins* : les mêmes jetons affichent −29 % et −20 % sur 24 h dans la vidéo.
+- Le vrai bot de copie pour Grok publié sur GitHub agit **une fois par heure**, en simulation par défaut, et non en 0,3 seconde.
+
 ## 🚫 Les bots à éviter
 
 **Projets abandonnés** : plus mis à jour, donc incompatibles avec les plateformes actuelles et sans correctifs de sécurité.
